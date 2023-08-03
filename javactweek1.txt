@@ -1,0 +1,78 @@
+
+Problem 1. Factorial calculation: 
+
+public class Factorial {
+    public static int factorial(int n) {
+        int result = 1;
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int number = 5;
+        int result = factorial(number);
+        System.out.println("Factorial of " + number + " is: " + result);
+    }
+}
+
+// My Explanation
+
+- Factorial method is made where a for loop is ran from 1 to whatever number n is assigned. 
+- The for loop mulitplies whatever numbers are ran through the loop.
+- This assigns n as 5, which multiplies every from 1 to 5 and assigns it as the result.
+- It will print 120 because 1 * 2 * 3 * 4 * 5 is what is multiplied to get our result.
+
+Problem 2. Prime Number Check
+
+public class PrimeNumber {
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int number = 17;
+        if (isPrime(number)) {
+            System.out.println(number + " is a prime number.");
+        } else {
+            System.out.println(number + " is not a prime number.");
+        }
+    }
+}
+
+// My Explanation
+
+- In isPrime, any number that is less or equal to 1 will print false because the smallest prime number is 2.
+- It also checks to see that if the number can be divided by any number smaller than it with no remainder, it's false beaucse prime numbers can only be divided within itself and 1.
+- In the public static void below, a conditional is set if the number is prime or not.
+- 17 is a prime number in this case and will print that it is a prime number.
+
+Problem 3: Array sorting
+
+import java.util.Arrays;
+
+public class ArraySorting {
+    public static void main(String[] args) {
+        int[] numbers = {5, 2, 8, 1, 9};
+        Arrays.sort(numbers);
+        System.out.print("Sorted Array: ");
+        for (int number : numbers) {
+            System.out.print(number + " ");
+        }
+    }
+}
+
+// My Explanation
+
+- This code imports a library that manages arrays.
+- It takes in numbers, which contains multiple numbers and sorts it in ascending order via the .sort method.
+- It will print the sorted array using the for loop to iterate through each number in the array.
